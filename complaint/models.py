@@ -7,7 +7,6 @@ class UserEmail(models.Model):
         ('Customer', 'Customer'),
     )
     user_email = models.EmailField()
-    # todo: modify user_type with the suitable data type
     user_type = models.CharField(max_length=140, choices = USER_TYPE)
     password = models.CharField(max_length=20)
 
@@ -20,8 +19,8 @@ class Complaint(models.Model):
         ('Resovled', 'Resovled'),
         ('Canceled', 'Canceled'),
     )
-    # complaint_for_user = models.ForeignKey('UserEmail', default = 1,  on_delete=models.CASCADE)
-    # complaint_date = models.DateField(blank=True, null=True)
+    complaint_for_user = models.ForeignKey('UserEmail', default = 1,  on_delete=models.CASCADE)
+    complaint_date = models.DateField(blank=True, null=True)
     complaint_content = models.TextField()
     complaint_status = models.CharField(max_length=140, choices=COMPLAINT_STATUS)
 
