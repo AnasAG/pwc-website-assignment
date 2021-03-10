@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background: white;
+  }
+  .project {
+    width: 400px;
+    margin-bottom: 1em;
+  }
+    .project > div {
+      display: inline-block;
+      margin: 0 -5px 0 0;
+      vertical-align: middle;
+    }
+  .task {
+    width: 2em;
+    height: 2em;
+    border: .4em solid #E4E4E7;
+    background: #E4E4E7;
+    border-radius: 100%;
+  }
+  .progress {
+    width: calc( 50% - 3em);
+    height: .6em;
+    padding: .2em 0;
+    background: #E4E4E7;
+    position: relative;
+  }
+    .progress>div {
+      height: .2em;
+      left: -.4em;
+      right: -.4em;
+      position: absolute;
+    }
+  .pending { background: #F8AC59; }
+  .running { background: #1C84C6; }
+  .passed { background: #1AB394; }
+  .failed { background: #ED5565; }
