@@ -26,4 +26,13 @@ def view_complaints(request):
     # view all complaint objects
     form = models.Complaint.objects.all()
     context = {'form': form}
-    return render(request, 'complaint_webpage.html', context)
+    # todo: raplace with 'customer_homepage.html'
+    return render(request, 'customer_homepage.html', context)
+
+def login(request):
+    context = {}
+    return render(request, 'login_webpage.html', context)
+
+def registration(request):
+    context = {}
+    return render(request, 'registration_webpage.html', context)
